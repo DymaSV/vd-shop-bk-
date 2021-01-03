@@ -1,4 +1,6 @@
 const devConnections = function (env) {
+  if(!env)
+    return console.error("Underfind .env");
   return {
     default: {
       connector: 'bookshelf',
@@ -19,6 +21,8 @@ const devConnections = function (env) {
 }
 
 const prodConnections = function (env) {
+  if(!env)
+    return console.error("Underfind .env");
   return {
     default: {
       connector: 'bookshelf',
